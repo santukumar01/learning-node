@@ -1,0 +1,3 @@
+name : "coding ninja"
+work : " post"
+place : "online";

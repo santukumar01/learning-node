@@ -1,0 +1,30 @@
+<!-- this page is used to add more prodcut -->
+
+<h1 class="mt-5 mb-4 header">Add new Product</h1>
+<% if( errorMessege){ %>
+    <div class="alert alert-danger" role="alert">
+        <%= errorMessege %>
+    </div>
+    <% } %>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Product Name </label>
+                <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="desc" class="form-label">Product Description </label>
+                <textarea type="text" class="form-control" id="desc" name="desc" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label"> Price </label>
+                <input type="number" class="form-control" id="price" name="price">
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">ImageUrl </label>
+                <!-- <input type="url" class="form-control" id="imageUrl" name="imageUrl"> -->
+                <!-- for acceting image of all type -->
+                <input type="file" name="imageUrl" id="imageUrl" accept="image/*">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Product</button>
+
+        </form>

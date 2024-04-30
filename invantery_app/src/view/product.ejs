@@ -1,0 +1,46 @@
+<% if(locals.lastVisit){ %>
+    <div class="alert alert-primary" role="alert">
+        You last visited at : <%= locals.lastVisit %>
+    </div>
+    <% }%>
+
+        <h1>This is the product page table</h1>
+        <table class="table table-dark header">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Image URL</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% products.forEach((product)=> { %>
+                    <tr>
+                        <td>
+                            <%= product.id %>
+                        </td>
+                        <td>
+                            <%= product.name %>
+                        </td>
+                        <td>
+                            <%= product.price %>
+                        </td>
+                        <td>
+                            <%= product.desc %>
+                        </td>
+                        <td>
+                            <img src=" <%= product.imageUrl %>" alt=" <%= product.name %>" style="max-width: 100px;" %>
+                        </td>
+                        <td>
+                            <a href="/update-product/<%= product.id %>" class="btn btn-warning">Update</a>
+                            <a href="/delete-product/<%= product.id %>" class="btn btn-danger">Delete</a>
+                            <!-- <button class="btn btn-danger" onclick="deleteProductById('<%= product.id %>')">Delete</button> -->
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>

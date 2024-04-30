@@ -1,0 +1,7 @@
+1 . install multer - done
+2 . changes view -  done (for binary data)
+3 . middleware to handle files 
+4 . apply that middlewre
+5 . update controller to update url of images .
+
+multipart / form data  
